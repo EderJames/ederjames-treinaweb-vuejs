@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <button @click="show = !show">Click Me</button>
+            <transition name="myAnimation">
+                <p v-if="show">Hello</p>
+            </transition>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({
+            el: "#app",
+            data: {
+                show: true
+            }
+        })
+    </script>
+    <style>
+        .myAnimation-enter-active, .myAnimation-leave-active {
+            transition: opacity .5s;
+        }
+        .myAnimation-enter, .myAnimation-leave-active{
+            opacity: 0;
+        }
+    </style>
+</html>

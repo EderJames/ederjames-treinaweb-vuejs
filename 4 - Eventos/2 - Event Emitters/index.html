@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+           
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: { 
+                counter: 0
+             },
+            
+             methods: {
+                 upCounter: function(){
+                     this.counter++;
+                 },
+                 upCounter2: function(param1){
+                     this.counter += param1;
+                 },
+                 upCounter3: function(){
+                     this.counter += 3;
+                 },
+                 upCounter4: function(){
+                     this.counter += 4;
+                 }
+             }
+        })
+
+        //Adicionando a escutta para os eventos
+        app.$on('upCounter', app.upCounter);
+        app.$on('upCounter2', app.upCounter2);
+        app.$on('upCounter3', app.upCounter3);
+        app.$once('upCounter4', app.upCounter2);
+
+        //Acionando o evento upCounter
+        app.$emit('upCounter');
+
+        //Acionando o evento upCounter2
+        app.$emit('upCounter2', 3);
+
+        //Removendo a escuta para o evento upCounter3.
+        app.$off('upCounter3', app.upCounter3);
+    </script>
+</html>

@@ -1,0 +1,8 @@
+Two-way-databind
+Através da diretiva v-model, podemos associar um campo no html, com um dado, na nossa instância Vue.
+
+Por padrão todo input retorna um texto.
+Podemos utilizar os modificadores .number, .trim e .lazy
+.number -> Transforma o dado em numérico
+.trim   -> Remove os espaços do dado, vindo do input.
+.lazy   -> Atualiza a viewModel somente após o campo perder o foco

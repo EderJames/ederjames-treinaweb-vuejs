@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <input v-hello type="text" />
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        Vue.directive('hello', {
+            inserted:function(el){
+                //el -> elemento em que a nossa diretiva se encontra
+                //Quando inserido
+                el.value = 'Hello World!'
+            }
+        })
+        var app = new Vue({
+            el: "#app"
+        })
+    </script>
+</html>

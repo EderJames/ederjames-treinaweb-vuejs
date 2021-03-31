@@ -1,0 +1,2 @@
+As propriedades dos componentes trabalham de forma unidirecional e as propriedades podem receber valores dos seus pais.
+Vemos esta situação no my-component com a propriedade :name="text", a propriedade exibe o valor da variável text, mas ela não pode alterar o valor de text.  

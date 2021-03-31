@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+           <rotate-element>
+               <h1>Hello World</h1>
+           </rotate-element>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+
+        Vue.component('rotate-element', {
+            template:   `
+                        <div> 
+                            <button @click="rotate">Rotate</button>
+                            <div ref="myElement">
+                                <slot></slot>
+                            </div>
+                        </div>`,
+            data: function(){
+                return {
+                    angle: 0
+                }
+            },
+            methods: {
+                rotate: function(){
+                    this.angle += 90,
+                    this.$refs.myElement.style.transform = `rotateZ(${this.angle}deg)`
+                }
+            }
+        })
+
+        var app = new Vue({
+            el: "#app",
+            data: {
+                myText: 'abc' 
+            }
+        })
+    </script>
+</html>

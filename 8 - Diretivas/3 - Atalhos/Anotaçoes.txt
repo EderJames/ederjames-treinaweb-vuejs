@@ -1,0 +1,17 @@
+Diretiva v-bind
+Comando normal:
+<img src="img.png" v-bind:title="imgTitle" />
+
+Comando com atalho:
+<img src="img.png"  :title="imgTitle" />
+
+Diretiva v-on
+Comando normal:
+<button v-on:click="click" > Click Me </button>
+
+Comando com atalho:
+<button @click="click" > Click Me </button>
+
+Para eventos também podemos usar uma sintaxe onde passamos um objeto com o nome do evento e a função a ser executada.
+Isso visa simplificar a manutenção do código quando temos um elemento com muitos eventos, pois você pode definir tudo na ViewModel e passar apenas o objeto para o "v-on".
+<button v-on="{ mousedown: click1, mouseup: click2 }"></button>

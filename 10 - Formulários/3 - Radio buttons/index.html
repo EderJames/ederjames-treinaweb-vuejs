@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <input type="checkbox" value="A" v-model="myyList" />
+            <input type="checkbox" value="B" v-model="myyList" />
+            <input type="checkbox" value="C" v-model="myyList" />
+            {{ myyList }}
+            
+            <br>
+
+            <input type="radio" value="A" v-model="myRadio" />
+            <input type="radio" value="B" v-model="myRadio" />
+            <input type="radio" value="C" v-model="myRadio" />
+            {{ myRadio }}
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({
+            el: "#app",
+            data: {
+                myyList: [],
+                myRadio: ''
+            }
+        })
+    </script>
+</html>

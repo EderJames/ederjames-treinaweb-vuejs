@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+            <my-component>
+                <h1 slot="titulo1">TreinaWeb</h1>
+                <h2 slot="titulo2">Title 2</h2>
+            </my-component>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+
+        Vue.component('my-component', {
+            template:   `
+                        <div> 
+                            <slot name="titulo1"></slot>
+                            <div>Hello</div>
+                            <slot name="titulo2"></slot>    
+                        </div>`
+        })
+
+        var app = new Vue({
+            el: "#app"
+        })
+    </script>
+</html>

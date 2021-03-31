@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+            <my-component name="Nome da propriedade"></my-component>
+            <!-- 
+                Fazendo o bind da propriedade name, através das diretivas do vue 
+            -->
+            <my-component :name="text"></my-component>
+
+            <my-component2 name="Joao" idade=20 cpf="12345678912"></my-component2>
+        
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+
+        Vue.component('my-component', {
+            template: `<div>Hello! {{ name }} </div>`,
+            props: ['name']
+        })
+
+        Vue.component('my-component2', {
+            template: `<div>Hello! {{ name }}-{{ idade }}-{{ cpf }}</div>`,
+            //Tipos disponíveis para as propriedades dos componentes:
+            //String, Number, Boolean, Function, Object, Array
+            props: [
+                "name",
+                "idade",
+                "cpf"]
+        })
+
+        var app = new Vue({
+            el: "#app",
+            data: { 
+                text: 'Meu texto'
+             }
+        })
+
+    </script>
+</html>

@@ -1,0 +1,3 @@
+Podemos incluir outros elementos dentro do componentes.
+Elementos colocados dentro da declaração do componente, serão ignorados.
+Para renderizarmos um dado dentro do componente, devemos colocar o elemento slot na nossa template e então colocarmos o elemento no local da tag slot, no momento da declaração

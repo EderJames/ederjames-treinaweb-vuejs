@@ -1,0 +1,2 @@
+As diretivas simples, podem ser declaradas como funções, sem necessariamente serem objetos.
+Nesta declaração, podemos pegar elemento(el) e o tipo de bind(binding) que ocorreu, temos este exemplo no arquivo index.html

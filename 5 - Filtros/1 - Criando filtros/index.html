@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+           {{title | upper | reverse | cut(2, 7)}}
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: { 
+                title: 'Treinaweb'
+             },
+             filters:{
+                 upper: function(text){
+                     return text.toUpperCase();
+                 },
+                 reverse: function(text){
+                     return text.split('').reverse().join('');
+                 },
+                 cut: function(text, index1, index2){
+                     return text.substring(index1, index2);
+                 }
+             }
+        })
+
+        
+    </script>
+</html>

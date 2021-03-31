@@ -1,0 +1,18 @@
+Quando criamos a nossa instância do Vue, estamos armazenando ela dentro da variável app.
+Através desta variável nós também podemos criar eventos, através da diretiva $on, que vai ficar escutando as alterações nesta variável.
+
+Para acionarmos os eventos declarados com a palavra chave $on, utilizamos o seguinte comando: nomeVariavel.$emit('nomeEvento', parametros).
+Como neste exemplo:
+
+app.$on('upCounter', app.upCounter);
+app.$on('upCounter2', app.upCounter2);
+
+app.$emit('upCounter');
+app.$emit('upCounter2', 3);
+
+Para removermos a escuta para um determinado evento, utilizamos o comando $off.
+app.$off('nomeEvento', app.nomeVariavel);
+
+A declaração de eventos com $once, faz com que o evento execute uma vez e depois seja destruído.
+
+O melhores locais para remover os eventos de uma instância do Vue, são nos métodos que representam o ciclo de vida de uma instância.

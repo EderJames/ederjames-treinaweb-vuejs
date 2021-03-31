@@ -1,0 +1,5 @@
+Os watchers são funções que possibilitam a observação de uma determinada propriedade.
+Para fazermos um watcher, devemos declarar uma propriedade chamada watch, ela deve ficar dentro da instância do Vue.
+Esta propriedade watch, armazenará todos os watches da nossa instância, para criarmos um, basta colocarmos uma propriedade no objeto com watch, com o mesmo nome da nossa propriedade no objeto data e atribuir uma função para ela.
+Temos um exemplo no index.html, com um watcher apontado para a propriedade question.
+São muito úteis quando trabalhamos com métodos assíncronos.

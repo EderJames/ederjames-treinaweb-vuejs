@@ -1,0 +1,6 @@
+Para obtermos os valores dos parâmetros da url, devemos definir um valor fixo ou uma variável na nossa query.
+Para acessarmos o valor que veio através da query params, utilizamos o seguinte comando:
+-> $route.params.name 
+
+Em situações do mundo real, podemos ter nomes fixos e dinâmicos em nossas rotas. Para impedir que essas rotas venham a se conflitar,
+devemos colocar as rotas com nomes fixos antes das rotas com nomes dinâmicos, isso fará com que o Vue compare o parâmetro com as rotas fixas e depois com as rotas dinâmicas.

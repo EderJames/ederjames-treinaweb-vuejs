@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+            <my-counter></my-counter>
+            <p>
+                <button @click="increment">+</button>
+                <button @click="decrement">-</button>
+            </p>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex"></script>
+    <script>
+        const store = new Vuex.Store({
+            state:{
+                count: 0
+            },
+            mutations:{
+                //As variáveis da store só podem ser alteradas pela própria store
+                increment: state => state.count++,
+                decrement: state => state.count--
+            }
+        })
+
+        Vue.component('my-counter', {
+            template: `<p>{{ count }}</p>`,
+            computed:{
+                count(){
+                    return this.$store.state.count
+                }
+            }
+        })
+
+        var app = new Vue({
+            el: '#app',
+            store: store,
+            methods: {
+                increment(){
+                    //O commit é um event.emitter()
+                    store.commit("increment");
+                },
+                decrement(){
+                    store.commit("decrement");
+                }
+            }
+        })
+
+    </script>
+</html>

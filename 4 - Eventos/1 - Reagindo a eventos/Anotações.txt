@@ -1,0 +1,7 @@
+Todas as nossas funções que pertencerem a nossa instância do Vue, devem ficar dentro
+da propriedade methods.
+Quando chamamos as funções do Vue, através da tela, os parênteses não são obrigatórios.
+Porém, se precisarmos passar parâmetros, teremos que colocar os parênteses.
+
+O @ é um atalho para a diretiva de eventos do vue.
+Podemos utilizar v-on:click="nomeFuncao" e também podemos utilizar @click="nomeFuncao".

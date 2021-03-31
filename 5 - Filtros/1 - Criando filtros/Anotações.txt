@@ -1,0 +1,7 @@
+Filtros são funções utilizadas para formatar textos que imprimis na view por chaves duplas.
+Os filtros devem ser declarados na propriedade filters, da nossa instância.
+Para acionarmos o nosso filtro devemos utilizar o pipe + nomeFuncaoFiltro.
+Como neste exemplo:
+<div id="app">
+    {{ variavelQueReceberaOFiltro | nomeFuncaoFiltro }}
+</div

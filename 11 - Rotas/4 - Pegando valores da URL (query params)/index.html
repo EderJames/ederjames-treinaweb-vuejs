@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <router-link to="/">Home</router-link>
+            <router-link to="/about">About</router-link>
+            <hr>
+
+            <router-view>
+
+            </router-view>
+
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router" ></script>
+    <script>
+        
+        const Home = {
+            template: `<div>Home Page</div>`
+        }
+
+        const About = {
+            template: `<div>About Page - {{ $route.params.name }}</div>`
+        }
+
+        const routes = [
+            { path: '/', component: Home },
+            { path: '/about/company', component: About },
+            { path: '/about/:name', component: About }
+        ]
+
+        const router = new VueRouter({routes});
+
+        var app = new Vue({
+            el: "#app",
+            router
+        })
+    </script>
+</html>

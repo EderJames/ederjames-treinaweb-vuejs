@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+            <!-- O v-bind:title o :title representam a diretiva de alteração de atributo de elemento -->
+            <span v-bind:title="message">ABC</span>
+            <span :title="message">ABC 2</span>
+            <br>
+            {{ message.toUpperCase() }}
+            <br>
+            {{ 5 + 3 }}
+            <br>
+            {{ true ? '3' : '5' }}
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: { message: "Hello Vue" },
+            
+            created: function(){
+                console.log("Criou");
+            }
+        })
+    </script>
+</html>

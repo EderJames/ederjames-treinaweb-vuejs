@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+
+            <my-component ref="meuComponente" @change="capturarAlteracao"></my-component>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+
+        Vue.component('my-component', {
+            template: `<div> 
+                            <button @click="upCounter">Click Me</button> - {{ counter }}
+                        </div>`,
+            data: function() {
+                return { counter: 0 }
+            },
+            methods:{
+                upCounter: function(){
+                    this.counter++;
+                    //Estamos acionando o evento change em si, ele fará com que a função capturarAlteracao seja executada.
+                    //Portanto, estamos simulando/forçando uma alteração.
+                    this.$emit('change');
+                    console.log(app.$refs.meuComponente);
+                }
+            }
+        })
+
+        var app = new Vue({
+            el: "#app",
+            methods:{
+                capturarAlteracao: function (params) {
+                    console.log('new value');
+                }
+            }
+        })
+
+        
+
+    </script>
+</html>

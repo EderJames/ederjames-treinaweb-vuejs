@@ -1,0 +1,2 @@
+Para criarmos diretivas, devemos declara-las na instância global do Vue, na propriedade Vue.directive.
+As diretivas também possuem tempo de vida.

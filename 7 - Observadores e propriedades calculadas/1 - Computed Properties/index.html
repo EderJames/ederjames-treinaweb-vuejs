@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                {{ reverse }}
+            </div>
+            <div>
+                {{ fullName }}
+            </div>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({
+            el: "#app",
+            data: {
+                text: 'TreinaWeb',
+                firstName: 'João',
+                lastName: 'Silva'
+            },
+            computed:{
+                reverse:function(){
+                    return this.text.split('').reverse().join('');
+                },
+                fullName: function(){
+                    return this.firstName + " " + this.lastName
+                }
+            }
+        })
+    </script>
+</html>

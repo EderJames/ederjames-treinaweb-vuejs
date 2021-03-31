@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" v-model.number="dadoNumerico" /> {{ dadoNumerico }}
+            <div :class="classes"></div>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({
+            el: "#app",
+            data: {
+                classes: {
+                    active: true
+                }
+            }
+        })
+    </script>
+</html>

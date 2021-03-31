@@ -1,0 +1,2 @@
+A utilização de router guards permite que o sistema gerencie o controle de acesso do usuário, nas páginas da aplicação.
+Para isso, devemos utilizar a propriedade beforeEach, presente na variável VueRouter.

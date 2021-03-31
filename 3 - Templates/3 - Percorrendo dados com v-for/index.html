@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+            <!-- Percorrendo uma lista -->
+            <ul>
+                <li v-for="item in list">
+                    {{ item.text }}
+                </li>
+            </ul>
+
+            <!-- Utilizando índices -->
+            <ul>
+                <li v-for="(item, index) in list">
+                    {{index}} - {{ item.text }}
+                </li>
+            </ul>
+            
+            <!-- Percorrendo números -->
+            <ul>
+                <li v-for="number in 5">
+                    {{ number }}
+                </li>
+            </ul>
+
+            <!-- percorrendo uma lista com keys --> 
+            <ul>
+                <li v-for="(item, index) in list" :key="index">
+                    {{ item.text }}
+                </li>
+            </ul>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: { 
+                list: [
+                    { text: 'item 1' },
+                    { text: 'item 2' },
+                    { text: 'item 3' }
+                ]
+            },
+            
+            created: function(){
+                console.log("Criou");
+            }
+        })
+    </script>
+</html>

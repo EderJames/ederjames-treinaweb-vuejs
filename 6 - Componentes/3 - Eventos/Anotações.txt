@@ -1,0 +1,3 @@
+A propriedade ref colocará um id no componente, assim teremos a capacidade de buscar este componente através do Vue.
+Para buscar este componente através do framework do vue, fazemos o seguinte:
+app.$refs.nomeRefComponente.

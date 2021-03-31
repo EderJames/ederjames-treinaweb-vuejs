@@ -1,0 +1,7 @@
+Criando rotas.
+Para navegarmos entre as páginas do view, utilizamos o componente router-link, este componente funcionará como uma tag de âncora comum.
+No local do atributo href da nossa âncora, teremos o atributo to="".
+
+Temos o objeto VueRouter, responsável por gerenciar as nossas rotas.
+Temos o componente router-view, responsável por exibir as páginas da nossa rota.
+E temos o envio da propriedade routes, para a nossa instância do Vue. 

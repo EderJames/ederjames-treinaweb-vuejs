@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+            <!-- A diferença é que o v-if não renderiza os elementos, já o v-show, apenas oculta eles  -->
+            <span v-if="isVisible">É falso</span>
+            <span v-elseif="isVisible2">Verdadeiro no else if</span>
+            <span v-else>É verdadeiro</span>
+            <br>
+            <span v-if="isVisible2">ABC2</span>
+            <br>
+            <span v-show="isVisible3">ABC2</span>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: { 
+                isVisible: false,
+                isVisible2: true,
+                isVisible3: true
+            },
+            
+            created: function(){
+                console.log("Criou");
+            }
+        })
+    </script>
+</html>

@@ -1,0 +1,33 @@
+Os modificadores permitem que passemos determinados comportamentos para as diretivas.
+Um exemplo muito comum do uso de modificadores se da com a diretiva v-on, através dela podemos escutar eventos e nestes eventos, podemos passar os modificadores.
+Neste exemplo, estamos passando o modificador .prevent, para a diretiva v-on:submit.
+<form v-on:submit.prevent="handleSubmit"></form>
+
+Os modificadores sempre são acionados com o comando .nomeModicador.
+Também temos o exemplo do v-on:keyup.13, para capturarmos a tecla enter.
+<input v-on:keyup.13="submit" />
+
+Também podemos fazer este mesmo comando com o nome da tecla:
+<input v-on:keyup.enter="submit" />
+
+Lista dos nomes das teclas:
+enter;
+tab;
+delete (funciona para "Delete" e "Backspace");
+esc;
+space;
+up;
+down;
+left;
+right.
+
+Também podemos definir nomes no objeto global do Vue.
+Vue.config.keyCodes.ctrl = 17;
+
+Assim, quando quisermos observar a tecla Ctrl não precisaremos colocar seu código (17). Poderemos chamar pelo nome que definimos (ctrl).
+
+Também há os modificadores em relação ao mouse. Para utilizá-los, usamos o evento "@click"
+
+left;
+right;
+middle.

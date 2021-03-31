@@ -1,0 +1,2 @@
+A vantagem de utilizar as propriedades computadas, se da pelo cache criado por elas, este cache nos permite obter o valor computado sem precisar executar a função novamente.
+Porém, caso um dos valores presentes na função computada seja alterado, o cache é removido e substituído pelo novo valor proveniente do resultado da reexecução da função computada.

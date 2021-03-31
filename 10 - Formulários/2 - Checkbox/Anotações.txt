@@ -1,0 +1,1 @@
+Os checboxes são tratados como listas e essa lista é atualizada a medida que marcamos e desmarcamos os elementos.

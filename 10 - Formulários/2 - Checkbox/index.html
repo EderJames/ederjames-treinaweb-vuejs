@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <input type="checkbox" value="A" v-model="myyList" />
+            <input type="checkbox" value="B" v-model="myyList" />
+            <input type="checkbox" value="C" v-model="myyList" />
+            {{ myyList }}
+
+            <br>
+            <input type="checkbox" :true-value="5" :false-value="18" v-model="myCheck" />
+            {{ myCheck }}
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({
+            el: "#app",
+            data: {
+                myyList: [],
+                myCheck: ''
+            }
+        })
+    </script>
+</html>

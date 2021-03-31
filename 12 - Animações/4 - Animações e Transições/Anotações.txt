@@ -1,0 +1,10 @@
+Quando um elemento está trabalhando com v-if ou v-for, ele recebe determinadas classes automaticamente.
+Sendo elas:
+nomeAnimacao-enter-active:
+Ao terminar a animação.
+
+nomeAnimacao-enter:
+Ao iniciar a animação.
+
+nomeAnimacao-leave-active:
+Ao terminar a animação de saída

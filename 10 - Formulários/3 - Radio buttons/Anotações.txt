@@ -1,0 +1,2 @@
+Quando agrupamos os radio buttons, apenas um poderá estar marcado.
+Diferentemente de uma lista, como temos no checkbox, o radio button é uma variável.

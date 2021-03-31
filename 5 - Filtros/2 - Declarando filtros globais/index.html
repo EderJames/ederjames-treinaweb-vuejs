@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+           {{title | upper }}
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        Vue.filter('upper', function(text){
+            return text.toUpperCase();
+        })
+
+        var app = new Vue({
+            el: "#app",
+            data: { 
+                title: 'Treinaweb'
+             },
+             filters:{
+                
+             }
+        })
+        
+        //Acionando o filto global manualmente
+        //O acesso a Vue.filter('upper') nos retornará a função upper.
+        console.log(Vue.filter('upper')("Nosso texto"));
+
+        //Para alterarmos o valor da função do filtro global, utilizamos a seguinte síntaxe:
+        Vue.filter('upper', function(text){
+            return text.toUpperCase() + " Reescrito";
+        })
+
+    </script>
+</html>

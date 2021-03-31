@@ -1,0 +1,1 @@
+Podemos trabalhar com views alinhadas, como nas duas subviews do about

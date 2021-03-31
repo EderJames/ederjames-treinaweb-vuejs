@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <input type="" v-model="myText"/>
+                <ul>
+                    <li v-for="char in letters">
+                        {{ char }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router" ></script>
+    <script>
+        
+        var app = new Vue({
+            el: "#app",
+            data: {
+                myText: ''
+            },
+            computed: {
+                letters: function(){
+                    var letters = [];
+                    var text = this.myText.split('');
+                    text.forEach(char => {
+                        if(!letters.includes(char)){
+                            letters.push(char);
+                        }
+                    })
+                    return letters.sort();
+                }
+            }
+        })
+    </script>
+</html>

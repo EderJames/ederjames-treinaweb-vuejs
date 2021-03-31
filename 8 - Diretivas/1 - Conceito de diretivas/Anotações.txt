@@ -1,0 +1,9 @@
+Diretivas são atributos que colocamos em nossos elementos. Eles têm o prefixo "v-" para indicar que são atributos especiais do Vue. 
+Sua função é aplicar alguma alteração a um elemento do DOM.
+
+O exemplo mais básico é o v-if
+<span v-if="isVisible" >TreinaWeb</span>
+
+Algumas diretivas podem receber argumentos. 
+Basta colocar dois pontos ( : ) após o nome da diretiva.
+<img src="img.png" v-bind:title="imgTitle" />

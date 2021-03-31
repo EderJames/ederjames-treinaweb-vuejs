@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{question}}</h1>
+            {{answer}}
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({
+            el: "#app",
+            data: {
+                firstName: 'João',
+                lastName: 'Silva'
+            },
+            data: {
+                question: '',
+                answer: ''
+            },
+            watch:{
+                question: function(value){
+                    this.answer = "thinking ...";
+                    setTimeout(() => {
+                        this.answer = "Yes"
+                    }, 2000)
+                }
+            },
+            mounted: function(){
+                this.question = "Are you ok?";
+            }
+        })
+    </script>
+</html>

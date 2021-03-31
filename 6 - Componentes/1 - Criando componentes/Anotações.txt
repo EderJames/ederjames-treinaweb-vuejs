@@ -1,0 +1,5 @@
+O jeito mais comum de utilizarmos componentes, é através dop registro global destes componentes.
+Este modelo de trabalho segue a mesma linha dos filtros globais, a diferença é que vamos registrar nossos componentes na propriedade Component.
+portanto Vue.component().
+Os nomes dos componentes devem ser todos em caixa baixa e devem possuir um traço.
+Podemos declarar os componentes com a tag deles, ou com o atributo 'is'

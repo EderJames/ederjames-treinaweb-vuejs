@@ -1,0 +1,9 @@
+Para declararmos filtros globais, temos que adicionar eles na propriedade filter, da variável global do Vue.
+Para fazermos essa declaração na variável global, utilizamos o seguinte comando:
+
+Vue.filter('upper', function(text){
+    return text.toUpperCase();
+})
+
+O acesso aos filtros globais, ocorre no mesmo formato que o acesso aos filtros locais.
+Porém, devemos lembrar de declarar os filtros globais antes da instância Vue responsável pelo local que vamos declarar o filtro.

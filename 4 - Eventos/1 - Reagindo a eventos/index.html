@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <button v-on:click="upCounter">Click me</button>
+                <button @click="upCounter2(2)">Click me</button>
+            </div>
+            <div>
+                {{counter}}
+            </div>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: { 
+                counter: 0
+             },
+            
+             methods: {
+                 upCounter: function(){
+                     this.counter++;
+                 },
+                 upCounter2: function(param1){
+                     this.counter += param1;
+                 }
+             }
+
+        })
+    </script>
+</html>

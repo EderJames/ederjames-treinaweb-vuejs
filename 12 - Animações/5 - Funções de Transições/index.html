@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <button @click="show = !show">Click Me</button>
+            <transition name="myAnimation" 
+                @before-enter="OnBeforeEnter"
+                @enter="onEnter"
+                @after-enter="OnAfterEnter"
+                @enter-cancelled="OnEnterCancelled"
+                @before-leave="OnBeforeLeave"
+                @leave="OnLeave"
+                @after-leave="OnAfterLeave"
+                >
+                <p v-if="show">Hello</p>
+            </transition>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({
+            el: "#app",
+            data: {
+                show: true
+            },
+            methods: {
+                OnBeforeEnter: function(el){
+                    console.log('Antes de aparecer');
+                },
+                onEnter: function(el, done){
+                    console.log('Aparecendo');
+                },
+                OnAfterEnter: function(el){
+                    console.log('Depois de aparecer');
+                },
+                OnEnterCancelled: function(el){
+                    console.log('Cancelamento de entrada');
+                },
+                OnBeforeLeave: function(el){
+                    console.log('Antes de sair');
+                },
+                OnLeave: function(el, done){
+                    console.log('Ao sair');
+                },
+                OnAfterLeave: function(el){
+                    console.log('Após sair');
+                }
+            }
+        })
+    </script>
+    <style>
+        .myAnimation-enter-active, .myAnimation-leave-active {
+            transition: opacity .5s;
+        }
+        .myAnimation-enter, .myAnimation-leave-active{
+            opacity: 0;
+        }
+    </style>
+</html>

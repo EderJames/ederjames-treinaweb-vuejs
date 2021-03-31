@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+           <my-component></my-component>
+           {{ title }}
+        
+           <table>
+                <!-- 
+                    Não podemos ter um my-tr como filho do table, 
+                    mas podemos transformar um tr em my-tr
+                -->
+                <tr is="my-tr"></tr>
+            </table>
+        </div>
+
+        
+
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+
+        var myData = {
+            title: 'Treinaweb'
+        }
+
+        Vue.component('my-component', {
+            template: `<div>Hello! {{ title }} </div>`,
+            data: function(){
+                //return {
+                //    title: 'Bye!' 
+                //}
+                return {
+                    myData
+                }
+            }
+        })
+
+        Vue.component('my-tr', {
+            template: `<tr>Sou uma tr</tr>`
+        })
+
+        var app = new Vue({
+            el: "#app",
+            data: { 
+                title: 'Treinaweb'
+             }
+        })
+
+        
+    </script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <select v-model="selected">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+                {{ selected }}
+            </div>
+            <br>
+            <div>
+                <select v-model="segundoSelected" multiple>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+                {{ segundoSelected }}
+            </div>
+            <br>
+            <div>
+                <select v-model="terceiroSelected" multiple>
+                    <option :value="1">A</option>
+                    <option :value="2">B</option>
+                    <option :value="3">C</option>
+                </select>
+                {{ terceiroSelected }}
+            </div>
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({
+            el: "#app",
+            data: {
+                selected: '',
+                segundoSelected: '',
+                terceiroSelected: '',
+            }
+        })
+    </script>
+</html>

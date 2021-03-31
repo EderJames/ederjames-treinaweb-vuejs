@@ -1,0 +1,3 @@
+Podemos passar uma lista de classes que serão adicionadas no nosso elemento.
+Essa informação é passada através das diretivas v-class ou :class, as classes serão passadas como um objeto json.
+Temos um exemplo desta funcionalidade, no arquivo index.html.

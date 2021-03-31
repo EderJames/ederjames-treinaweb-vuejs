@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" v-model.number="dadoNumerico" /> {{ dadoNumerico }}
+            <br>
+            <input type="text" v-model.trim="dadoTextoSemEspacos" /> {{ dadoTextoSemEspacos }}
+            <br>
+            <input type="text" v-model.lazy="dadoTextoComAtraso" /> {{ dadoTextoComAtraso }}
+        </div>
+    </body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({
+            el: "#app",
+            data: {
+                dadoNumerico: 0,
+                dadoTextoSemEspacos: "",
+                dadoTextoComAtraso: ""
+            }
+        })
+    </script>
+</html>

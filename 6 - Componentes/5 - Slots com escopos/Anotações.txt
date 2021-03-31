@@ -1,0 +1,7 @@
+Acessando valores presentes no componente, através da tag slot.
+Neste exemplo, temos a variável myText, dentro do componente e dentro da instância do Vue, entretanto, sempre estamos
+acessando a variável que está na instância do Vue.
+Para fazermos isso, devemos permitir que o slot receba uma propriedade vinda da declaração do html do nosso componente.
+Após fazermos essa permissão no slot, devemos mudar a forma como delcaramos o nosso componente, passando a colocar o elemento que ficará no local do slot, dentro da tag <template>,
+e na tag template, passamos a propriedade scope, responsável por representar o escope em que pretendemos buscar os valores.
+Neste propriedade, colocamos o valor props, e o acesso a variável fica como props.compText, como no exemplo do arquivo index.html
